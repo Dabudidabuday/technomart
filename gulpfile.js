@@ -1,7 +1,7 @@
 'use strict';
 /**
   * @gulpfile {for practice}
-  * browsersyncs on files changes and compiles scss to css (dist folder);
+  * compiles js and scss to css on files changes (dist folder);
   * use "gulp watch" command to start;
   */
 
@@ -15,31 +15,32 @@ function deleteDistFolder () {
   return del('dist');
 }
 
-function startBrowserSync () {
-  browserSync.init({
-    server: {
-      baseDir: './'
-    },
-    open: false,
-    notify: false,
-    port: 3000
-  });
-}
-
-function compileScss () {
-  return src('app/scss/index.scss')
+/**
+  * @method compileScss
+  * @param src {String}
+  * @param dist {String}
+  */
+function compileScss (source, dist) {
+  return src(source)
     .pipe(sass().on('error', sass.logError))
     .pipe(concat('main.css'))
-    .pipe(dest('dist'));
+    .pipe(dest(dist));
 }
 
+// ---------------- BUILD PAGES ---------------- //
+function buildHomePage () {
+  compileScss('app/scss/HomePage/index.scss', 'dist/HomePage');
+}
+
+// ---------------- BUILD PROJECT ---------------- //
+function buildProject (cb) {
+  buildHomePage();
+  cb();
+}
+
+// ---------------- WATCHER ---------------- //
 function watchFiles () {
-  startBrowserSync();
-
-  watch('index.html').on('change', browserSync.reload);
-
-  watch('app/scss/**/*.scss').on('change', compileScss);
-  watch('dist/main.css').on('change', browserSync.reload);
+  watch('app/scss/**/*.scss').on('change', buildProject);
 }
 
-exports.watch = series(deleteDistFolder, compileScss, watchFiles);
+exports.watch = series(deleteDistFolder, buildProject, watchFiles);
