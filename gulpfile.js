@@ -33,9 +33,8 @@ function buildHomePage () {
 }
 
 // ---------------- BUILD PROJECT ---------------- //
-function buildProject (cb) {
-  buildHomePage();
-  cb();
+async function buildProject () {
+  await buildHomePage();
 }
 
 // ---------------- WATCHER ---------------- //
