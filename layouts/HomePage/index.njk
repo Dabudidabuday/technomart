@@ -1,5 +1,10 @@
 {% extends 'layouts/base.njk' %}
 
+{% block stylesheets %}
+  {{ super() }}
+  <link rel="stylesheet" href="dist/HomePage/main.css">
+{% endblock %}
+
 {% block body %}
   <p>lala</p>
 {% endblock %}
