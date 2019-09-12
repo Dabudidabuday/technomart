@@ -1,0 +1,24 @@
+.main-header__navigation {
+    margin-top: 40px;
+
+
+    > ul {
+        height: 100%;
+        background-color: #32425c;
+
+        a {
+            display: block;
+            padding: 25px 25px;
+            font-size: 17px;
+            line-height: 17px;
+            cursor: pointer;
+            background-color: #32425c;
+
+            &:hover {
+                background-color: #293449;
+            }
+        }
+    }
+
+
+}

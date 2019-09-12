@@ -33,7 +33,7 @@
     </div>
 
     <div class="flex-container jc-space-between">
-        <div class="header__title">
+        <div class="main-header__title">
             <h1>
                 <i>Интернет-магазин <br>
                 строительных материалов <br>
@@ -41,7 +41,7 @@
             </h1>
         </div>
 
-        <div class="header__contacts">
+        <div class="main-header__contacts">
 
             <button type="button" class="reset-btn contacts__to-call">
                 <span class="button__icon">
@@ -52,9 +52,15 @@
             <p class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. </p>
         </div>
 
-        <div class="header__cabinet">
-            <button type="button" class="reset-btn enter">Войти</button>
+        <div class="main-header__cabinet">
+            <button type="button" class="reset-btn enter">
+                <span class="enter__icon">
+                    {% include 'layouts/icons/login.njk' %}
+                </span>Войти</button>
             <button type="button" class="reset-btn registration">Регистрация</button>
         </div>
     </div>
+
+    {% include 'layouts/basic/header/navigation.njk' %}
+
 </header>
