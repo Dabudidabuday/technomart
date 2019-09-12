@@ -113,6 +113,8 @@
 
 
     .header__cabinet {
+        display: flex;
+
 
         button {
             display: flex;
@@ -126,6 +128,7 @@
         }
 
         .enter {
+            margin-right: 10px;
             padding-right: 25px;
             padding-left: 15px;
         }
