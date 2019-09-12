@@ -6,7 +6,7 @@
   */
 
 const { gulp, src, dest, series, parallel, watch } = require('gulp');
-const browserSync = require('browser-sync').create();
+// const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const del = require('del');
@@ -28,18 +28,30 @@ function compileScss (source, dist) {
 }
 
 // ---------------- BUILD PAGES ---------------- //
+function buildApp () {
+  compileScss('app/scss/framework/index.scss', 'dist/App');
+}
+
 function buildHomePage () {
   compileScss('app/scss/HomePage/index.scss', 'dist/HomePage');
 }
 
+// function buildCatalogPage () {
+//   compileScss('')
+// }
+
 // ---------------- BUILD PROJECT ---------------- //
 async function buildProject () {
+  buildApp();
+  // buildCatalogPage();
   await buildHomePage();
 }
 
 // ---------------- WATCHER ---------------- //
 function watchFiles () {
-  watch('app/scss/**/*.scss').on('change', buildProject);
+  watch('app/scss/HomePage/**/*.scss').on('change', buildHomePage);
+  watch('app/scss/framework/**/*.scss').on('change', buildApp);
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
+// exports.build = buildProject;

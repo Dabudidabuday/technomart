@@ -5,7 +5,8 @@
   "main": "gulpfile.js",
   "scripts": {
     "dev": "nodemon server.js -e njk",
-    "gulp": "gulp watch"
+    "gulp": "gulp watch",
+    "build": "gulp build"
   },
   "keywords": [
     "-"
