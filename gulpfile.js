@@ -27,13 +27,19 @@ function compileScss (source, dist) {
     .pipe(dest(dist));
 }
 
-// ---------------- BUILD PAGES ---------------- //
+// ---------------- BUILD PAGES ---------------- // // todo class
 function buildApp () {
+  let date = new Date();
+  let page = 'App/Framework'; // todo param
   compileScss('app/scss/framework/index.scss', 'dist/App');
+  return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
 
 function buildHomePage () {
+  let date = new Date();
+  let page = 'HomePage'; // todo param
   compileScss('app/scss/HomePage/index.scss', 'dist/HomePage');
+  return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
 
 // function buildCatalogPage () {
