@@ -1,26 +1,60 @@
 <header class="main-header">
     <div class="main-header__top-line-backgound">
-        <div class="container">
+        <div class="flex-container">
             <div class="main-header__logo">
                 <a href="">техномарт</a>
             </div>
 
             <div class="main-header__search">
-                <input type="text">
+                <span class="search__icon">
+                {% include 'layouts/icons/search.njk' %}
+                </span>
+                <input type="text" placeholder="Поиск:">
             </div>
 
-            <div class="main-header__bookmarks">
+            <div class="main-header__bookmarks main-header__button">
+                <span class="button__icon">
+                    {% include 'layouts/icons/bookmark.njk' %}
+                </span>
                 <a href="">Закладки:</a>
             </div>
 
-            <div class="main-header__basket">
-                <button type="button"></button>
+            <div class="main-header__basket main-header__button">
+                <span class="button__icon">
+                    {% include 'layouts/icons/cart.njk' %}
+                </span>
+                <button type="button" class="reset-btn">Корзина:</button>
             </div>
 
-            <div class="main-header__to-checkout">
+            <div class="main-header__to-checkout main-header__button">
                 <a href="">Оформить заказ</a>
             </div>
         </div>
     </div>
 
+    <div class="flex-container jc-space-between">
+        <div class="header__title">
+            <h1>
+                <i>Интернет-магазин <br>
+                строительных материалов <br>
+                и инструментов для ремонта</i>
+            </h1>
+        </div>
+
+        <div class="header__contacts">
+
+            <button type="button" class="reset-btn contacts__to-call">
+                <span class="button__icon">
+                    {% include 'layouts/icons/phone.njk' %}
+                </span>
+                +7 (812) 555-05-55
+            </button>
+            <p class="contacts__address">г. Санкт-Петербург, ул. Б. Конюшенная, д. </p>
+        </div>
+
+        <div class="header__cabinet">
+            <button type="button" class="reset-btn enter">Войти</button>
+            <button type="button" class="reset-btn registration">Регистрация</button>
+        </div>
+    </div>
 </header>

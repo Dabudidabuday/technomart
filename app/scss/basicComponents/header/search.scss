@@ -1,0 +1,57 @@
+.main-header__search {
+    position: relative;
+
+    &:hover {
+
+        .search__icon path {
+            opacity: 1;
+        }
+    }
+
+    &:focus,
+    &:active {
+
+        .search__icon path {
+            opacity: 0.5;
+        }
+    }
+}
+
+
+.search__icon {
+    position: absolute;
+    top: 13px;
+    left: 11px;
+    display: block;
+    width: 20px;
+    height: 20px;
+
+    & path {
+        fill: #fff;
+        opacity: 0.3;
+    }
+}
+
+input[type="text"] {
+    padding-left: 40px;
+    width: 200px;
+    height: 40px;
+    font-size: 17px;
+    line-height: 18px;
+    font-family: inherit;
+    color: #fff;
+    border: none;
+    outline: none;
+    background-color: transparent;
+
+
+    @include placeholder {
+        color: #fff;
+        font-weight: 700;
+
+    }
+
+    &:hover {
+        background-color: #212a3a;
+    }
+}

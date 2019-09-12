@@ -1,1 +1,65 @@
 @import 'reset.scss';
+@import 'links.scss';
+@import 'mixins.scss';
+
+html,body {
+    font-family: 'Cuprum', sans-serif;
+
+}
+.container {
+    width: 942px;
+    margin: 0 auto;
+
+
+}
+
+.flex-container {
+  @extend .container;
+  @include flexContainer(row);
+}
+
+.flex-container-wrap {
+  @extend .flex-container;
+  flex-wrap: wrap;
+}
+
+.flex-container-vertical {
+  @extend .container;
+  @include flexContainer(column);
+}
+
+.flex-container-vertical-wrap {
+  @extend .flex-container-vertical;
+  flex-wrap: wrap;
+}
+
+.reset-btn {
+    padding: 0;
+    border: none;
+    background-color: transparent;
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+
+
+
+
+
+
+
+// ----- Align-items
+@each $type in (center, flex-start, flex-end, baseline, stretch) {
+  .ai-#{$type} {
+    align-items: $type;
+  }
+}
+
+
+// ----- Justify-content
+@each $type in (center, space-between, space-around, flex-start, flex-end, left, right) {
+  .jc-#{$type} {
+    justify-content: $type;
+  }
+}

@@ -1,0 +1,8 @@
+a {
+    color: white;
+
+     &:active,
+     &:focus {
+         color: white;
+     }
+}

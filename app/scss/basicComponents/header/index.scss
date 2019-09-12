@@ -1,1 +1,133 @@
+@import '../framework/mixins.scss';
 
+
+.main-header {
+    @import 'search.scss';
+    background-color: #f4f7f9;
+
+    .main-header__top-line-backgound {
+        width: 100%;
+        height: 42px;
+        background-color: #293449;
+        margin-bottom: 40px;
+
+        & > .flex-container {
+            justify-content: space-between;
+        }
+    }
+
+    .main-header__logo {
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 220px;
+            height: 47px;
+            font-size: 24px;
+            line-height: 24px;
+            color: #fff;
+            text-transform: uppercase;
+            background-color: #ee3643;
+            border-bottom: 5px solid #b52933;
+        }
+    }
+
+
+
+     .main-header__button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 42px;
+        width: 150px;
+        cursor: pointer;
+
+        &:hover {
+
+            .button__icon {
+                opacity: 0.5;
+            }
+        }
+
+        .button__icon {
+            margin-right: 15px;
+        }
+
+        .button__icon path,
+        .button__icon g {
+            fill: #fff;
+        }
+
+        button {
+            color: #fff;
+        }
+    }
+
+    .main-header__to-checkout {
+        background-color: #63a63e;
+    }
+
+    .header__title {
+
+        h1 {
+            margin-left: 54px;
+            color: #ef505b;
+            font-size: 16px;
+            line-height: 23px;
+            font-weight: 500;
+
+        }
+    }
+
+
+    .header__contacts {
+
+        .contacts__to-call {
+            margin-bottom: 7px;
+            padding: 0 42px 0 0;
+            display: flex;
+            align-items: center;
+            width: 270px;
+            height: 45px;
+            font-size: 21px;
+            line-height: 21px;
+            color: #ee3643;
+            background-color: transparent;
+            border: 3px solid #fff;
+
+
+            .button__icon {
+                display: inline-block;
+                margin-right: 20px;
+                margin-left: 15px;
+                height: 20px;
+            }
+        }
+
+        .contacts__address {
+            color: #32425c;
+        }
+    }
+
+
+
+    .header__cabinet {
+
+        button {
+            display: flex;
+            align-items: center;
+            height: 45px;
+            font-size: 21px;
+            line-height: 21px;
+            color: #000;
+            background-color: #fff;
+
+        }
+
+        .enter {
+            padding-right: 25px;
+            padding-left: 15px;
+        }
+    }
+}

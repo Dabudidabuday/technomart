@@ -28,12 +28,12 @@ function compileScss (source, dist) {
 }
 
 // ---------------- BUILD PAGES ---------------- //
-function buildApp () {
-  compileScss('app/scss/framework/index.scss', 'dist/App');
+async function buildApp () {
+  await compileScss('app/scss/framework/index.scss', 'dist/App');
 }
 
-function buildHomePage () {
-  compileScss('app/scss/HomePage/index.scss', 'dist/HomePage');
+async function buildHomePage () {
+  await compileScss('app/scss/HomePage/index.scss', 'dist/HomePage');
 }
 
 // function buildCatalogPage () {
@@ -51,6 +51,7 @@ async function buildProject () {
 function watchFiles () {
   watch('app/scss/HomePage/**/*.scss').on('change', buildHomePage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
+  watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
