@@ -4,4 +4,4 @@ module.exports = function (app, router) {
 
   app.use(home);
   app.use(developer);
-}
+};

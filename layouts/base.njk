@@ -1,18 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  {% block stylesheets %}
-
+  {% block meta %}
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
   {% endblock %}
+
+  {% block stylesheets %}
+    <link rel="stylesheet" href="dist/App/main.css">
+  {% endblock %}
+
   <title>Document</title>
 </head>
 <body>
   {% block header %}
     {% include 'layouts/basic/header/main.njk' %}
   {% endblock %}
+
   {% block body %}{% endblock %}
 </body>
 </html>
