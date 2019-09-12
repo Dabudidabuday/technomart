@@ -17,7 +17,7 @@ function deleteDistFolder () {
 
 /**
   * @method compileScss
-  * @param src {String}
+  * @param source {String}
   * @param dist {String}
   */
 function compileScss (source, dist) {
