@@ -1,0 +1,13 @@
+.product-card {
+  width: 300px;
+  background: lighten(orange, 35%);
+  border: 2px solid gray;
+
+  .product-card__preview {
+    max-width: 100%;
+
+    img {
+      max-width: 100%;
+    }
+  }
+}
