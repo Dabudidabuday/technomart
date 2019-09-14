@@ -42,20 +42,24 @@ function buildHomePage () {
   return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
 
-// function buildCatalogPage () {
-//   compileScss('')
-// }
+function buildCatalogPage () {
+  let date = new Date();
+  let page = 'CatalogPage'; // todo param
+  compileScss('app/scss/CatalogPage/index.scss', 'dist/CatalogPage');
+  return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+}
 
 // ---------------- BUILD PROJECT ---------------- //
 async function buildProject () {
   buildApp();
-  // buildCatalogPage();
   await buildHomePage();
+  buildCatalogPage();
 }
 
 // ---------------- WATCHER ---------------- //
 function watchFiles () {
   watch('app/scss/HomePage/**/*.scss').on('change', buildHomePage);
+  watch('app/scss/CatalogPage/**/*.scss').on('change', buildCatalogPage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
   watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
 }
