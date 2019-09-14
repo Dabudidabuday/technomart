@@ -1,7 +1,13 @@
 .product-card {
+    margin-bottom: 20px;
     width: 220px;
     height: 320px;
     border: 2px solid #eeeeee;
+
+    &:hover {
+        border: none;
+        box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1)
+    }
 
     .product-card__preview {
         max-width: 100%;
