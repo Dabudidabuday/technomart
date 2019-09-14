@@ -9,13 +9,19 @@ html,body {
 .container {
     width: 942px;
     margin: 0 auto;
-
-
 }
 
 .flex-container {
   @extend .container;
   @include flexContainer(row);
+}
+
+.visually-hidden {
+    -webkit-visibolity: none;
+    visibility: none;
+    position: absolute;
+    height: 0;
+    opacity: 0;
 }
 
 .flex-container-wrap {
