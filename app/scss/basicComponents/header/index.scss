@@ -1,7 +1,5 @@
 @import '../framework/mixins.scss';
 
-
-
 .main-header {
     @import 'search.scss';
     @import 'navigation.scss';
@@ -20,7 +18,6 @@
     }
 
     .main-header__logo {
-
         a {
             display: flex;
             justify-content: center;
@@ -36,8 +33,6 @@
         }
     }
 
-
-
      .main-header__button {
         display: flex;
         align-items: center;
@@ -47,7 +42,6 @@
         cursor: pointer;
 
         &:hover {
-
             .button__icon {
                 opacity: 0.5;
             }
@@ -72,20 +66,17 @@
     }
 
     .main-header__title {
-
         h1 {
             margin-left: 54px;
             color: #ef505b;
             font-size: 16px;
             line-height: 23px;
             font-weight: 500;
-
         }
     }
 
 
     .main-header__contacts {
-
         .contacts__to-call {
             margin-bottom: 7px;
             padding: 0 42px 0 0;
@@ -98,7 +89,6 @@
             color: #ee3643;
             background-color: transparent;
             border: 3px solid #fff;
-
 
             .button__icon {
                 display: inline-block;
@@ -113,11 +103,8 @@
         }
     }
 
-
-
     .main-header__cabinet {
         display: flex;
-
 
         button {
             display: flex;
