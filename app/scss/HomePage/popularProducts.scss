@@ -1,5 +1,18 @@
 .popular-products {
-  .popular-products__title {
-    font-size: 36px;
-  }
+
+    .popular-products__header {
+        padding: 30px;
+        background-color: #f9f5f0;
+
+    }
+
+    .popular-products__title {
+        font-size: 30px;
+        line-height: 30px;
+        color: #32425c;
+        font-weight: 100;
+        text-transform: uppercase;
+
+
+    }
 }
