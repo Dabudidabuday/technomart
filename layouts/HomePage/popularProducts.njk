@@ -1,13 +1,15 @@
 <section class="popular-products">
   <div class="popular-products__header flex-container jc-space-between ai-center">
     <h3 class="popular-products__title">
-      Популярные товары
+      Популярные товары:
     </h3>
 
-    <button class="">Все популярные товары</button>
+    <button class="reset-btn to-popular-products">Все популярные товары</button>
   </div>
 
-  <div class="popular-products__body flex-container">
+  <div class="popular-products__body flex-container jc-space-between">
+
+    {% include 'layouts/basic/productCard/small/main.njk' %}
     {% include 'layouts/basic/productCard/small/main.njk' %}
     {% include 'layouts/basic/productCard/small/main.njk' %}
     {% include 'layouts/basic/productCard/small/main.njk' %}
