@@ -52,8 +52,8 @@ function buildCatalogPage () {
 // ---------------- BUILD PROJECT ---------------- //
 async function buildProject () {
   buildApp();
-  await buildHomePage();
-  buildCatalogPage();
+  buildHomePage();
+  await buildCatalogPage();
 }
 
 // ---------------- WATCHER ---------------- //
