@@ -6,6 +6,7 @@
     justify-content: space-between;
     align-items: center;
     padding: 25px 35px 25px 25px;
+    transition: ease-in-out .25s;
 
     &--orange {
         background-color: orange;
@@ -24,6 +25,7 @@
     }
 
     &:hover {
+      box-shadow: 0px 0px 2px 4px rgba(0, 0, 0, 0.1);
 
         .category__tooltip {
 
