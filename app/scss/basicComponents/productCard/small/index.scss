@@ -3,6 +3,7 @@
     width: 220px;
     height: 320px;
     border: 2px solid #eeeeee;
+    transition: ease-in-out .25s;
 
     &:hover {
         border: none;
@@ -15,7 +16,7 @@
         img {
             display: block;
             margin: 0 auto;
-          max-width: 100%;
+            max-width: 100%;
         }
     }
 
