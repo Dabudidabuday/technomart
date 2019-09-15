@@ -3,10 +3,10 @@
     width: 220px;
     height: 320px;
     border: 2px solid #eeeeee;
-    transition: ease-in-out .25s;
+    transition: ease-in-out .2s;
 
     &:hover {
-        border: none;
+        border-color: transparent;
         box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.1)
     }
 
