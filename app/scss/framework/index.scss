@@ -12,6 +12,16 @@ html,body {
     margin: 0 auto;
 }
 
+.clear {
+    clear: both;
+}
+
+.clearfix::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
 .flex-container {
   @extend .container;
   @include flexContainer(row);
