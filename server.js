@@ -8,6 +8,11 @@ const app = express();
 const router = express.Router();
 const port = process.env.PORT || 8000;
 
+app.use(express.text({ type: 'text/plain' }));
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(express.json({ type: 'application/*+json' }));
+
 app.use(express.static(path.join(__dirname + '')));
 app.set('view engine', 'njk');
 nunjucks.configure({
