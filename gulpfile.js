@@ -49,10 +49,19 @@ function buildCatalogPage () {
   return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
 }
 
+function buildDeveloperPage () {
+  let date = new Date();
+  let page = 'DeveloperPage'; // todo param
+  compileScss('app/scss/DeveloperPage/index.scss', 'dist/DeveloperPage');
+  return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+}
+
+
 // ---------------- BUILD PROJECT ---------------- //
 async function buildProject () {
   buildApp();
   buildHomePage();
+  buildDeveloperPage();
   await buildCatalogPage();
 }
 
@@ -60,9 +69,10 @@ async function buildProject () {
 function watchFiles () {
   watch('app/scss/HomePage/**/*.scss').on('change', buildHomePage);
   watch('app/scss/CatalogPage/**/*.scss').on('change', buildCatalogPage);
+  watch('app/scss/DeveloperPage/**/*.scss').on('change', buildDeveloperPage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
   watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
-// exports.build = buildProject;
+exports.build = series(deleteDistFolder, buildProject);

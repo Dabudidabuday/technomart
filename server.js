@@ -15,7 +15,7 @@ nunjucks.configure({
   express: app
 });
 
-// app.get('/', (request, respone) => response.redirect('/home'));
+app.get('/', (request, response) => response.redirect('/home'));
 
 // ------------------
 require('./src/controller/index.js')(app, router);

@@ -12,7 +12,9 @@
     <link rel="stylesheet" href="dist/App/main.css">
   {% endblock %}
 
-  <title>Document</title>
+  {% block title %}
+    <title>{{ title }}</title>
+  {% endblock %}
 </head>
 <body>
   {% block header %}

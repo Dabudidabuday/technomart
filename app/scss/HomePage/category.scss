@@ -5,8 +5,11 @@
         display: inline-block;
         width: 300px;
         height: 123px;
-        margin-right: 11px;
         margin-bottom: 16px;
+
+        &:not(:first-child) {
+          margin-left: 11px;
+        }
     }
 }
 

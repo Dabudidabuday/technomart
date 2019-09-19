@@ -1,5 +1,14 @@
 {% extends 'layouts/base.njk' %}
 
+{% block stylesheets %}
+  {{ super() }}
+  <link rel="stylesheet" href="dist/DeveloperPage/main.css">
+{% endblock %}
+
 {% block body %}
-  <p>dev</p>
+  <h4 class="developer__title">dev</h4>
+
+  {% for product in products %}
+    <p>{{ product.title }}</p>
+  {% endfor %}
 {% endblock %}
