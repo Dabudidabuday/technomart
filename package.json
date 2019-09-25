@@ -4,7 +4,7 @@
   "description": "",
   "main": "gulpfile.js",
   "scripts": {
-    "dev": "nodemon server.js -e njk",
+    "dev": "nodemon server.js -e js,njk",
     "gulp": "gulp watch",
     "build": "gulp build"
   },
@@ -24,6 +24,7 @@
   ],
   "license": "ISC",
   "dependencies": {
+    "axios": "^0.19.0",
     "browser-sync": "^2.26.7",
     "del": "^5.1.0",
     "dotenv": "^8.1.0",
