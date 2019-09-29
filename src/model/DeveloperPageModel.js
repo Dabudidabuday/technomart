@@ -7,8 +7,6 @@ class DeveloperPageModel {
       {title: 'Perfo3', price: '2121', id: 441},
     ]
   }
-
-
 }
 
 module.exports = new DeveloperPageModel();

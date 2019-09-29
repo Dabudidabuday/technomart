@@ -6,7 +6,6 @@
 {% endblock %}
 
 {% block body %}
-  <p>{{ breeds }}</p>
   {% include 'layouts/HomePage/category.njk' %}
   {% include 'layouts/HomePage/popularProducts.njk' %}
   {% include 'layouts/HomePage/popularBrands.njk' %}
@@ -15,8 +14,8 @@
 {% endblock %}
 
 {% block application %}
-  <script>
-    var title = {{ breeds | dump | safe }}
+  <script> // todo temp
+    var title = {{ title | dump | safe }}
     console.log (title);
     setTimeout(function () {
       console.log (title);
