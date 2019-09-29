@@ -21,10 +21,14 @@
 </head>
 
 <body>
-{% block header %}
-    {% include 'layouts/basic/header/main.njk' %}
-{% endblock %}
+  {% block header %}
+      {% include 'layouts/basic/header/main.njk' %}
+  {% endblock %}
 
-{% block body %}{% endblock %}
+  {% block body %}{% endblock %}
+
+  {% block footer %}{% endblock %}
+
+  {% block application %}{% endblock %}
 </body>
 </html>

@@ -75,4 +75,4 @@ function watchFiles () {
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
-exports.build = series(deleteDistFolder, buildProject);
+exports.build = buildProject;
