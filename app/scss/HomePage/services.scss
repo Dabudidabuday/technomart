@@ -24,7 +24,6 @@
     width: fit-content;
 
     .item {
-
         &:not(:first-child) {
             .services__tab {
                 border-top: 1px solid #4d627b;
@@ -69,8 +68,6 @@
 
     .tab__content {
         display: flex;
-
-        align-items: center;
         flex-direction: column;
         align-items: flex-start;
 

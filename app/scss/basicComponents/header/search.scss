@@ -2,7 +2,6 @@
     position: relative;
 
     &:hover {
-
         .search__icon path {
             opacity: 1;
         }
@@ -10,7 +9,6 @@
 
     &:focus,
     &:active {
-
         .search__icon path {
             opacity: 0.5;
         }
@@ -44,11 +42,9 @@ input[type="text"] {
     outline: none;
     background-color: transparent;
 
-
     @include placeholder {
         color: #fff;
         font-weight: 700;
-
     }
 
     &:hover {
