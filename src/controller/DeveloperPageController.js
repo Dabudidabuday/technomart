@@ -8,7 +8,9 @@ module.exports = function (router) {
    * @return Response
    */
   router.get('/developer', function (request, response) {
-    response.render('layouts/DeveloperPage/index.njk', DeveloperPageModel);
+    console.log (DeveloperPageModel);
+    // response.render('layouts/DeveloperPage/index.njk', DeveloperPageModel);
+    response.send(DeveloperPageModel);
   });
 
   /**

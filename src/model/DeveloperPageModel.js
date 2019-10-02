@@ -1,6 +1,10 @@
-class DeveloperPageModel {
+const BaseModel = require('./BaseModel.js');
+
+class DeveloperPageModel extends BaseModel {
   constructor () {
-    this.title = 'devvv';
+    super();
+
+    this.title = 'developer page';
     this.products = [
       {title: 'Perfo1', price: '3333', id: 285},
       {title: 'Perfo2', price: '3232', id: 180},

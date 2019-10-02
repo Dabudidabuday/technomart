@@ -4,9 +4,9 @@ require('dotenv').config();
 const express = require('express');
 const nunjucks = require('nunjucks');
 const path = require('path');
-const app = express();
-const router = express.Router();
 const port = process.env.PORT || 8000;
+const router = express.Router();
+const app = express();
 
 app.use(express.text({ type: 'text/plain' }));
 app.use(express.urlencoded({ extended: false }));
@@ -22,7 +22,7 @@ nunjucks.configure({
 
 app.get('/', (request, response) => response.redirect('/home'));
 
-// ------------------
+// ------------------ controller
 require('./src/controller/index.js')(app, router);
 // ------------------
 
