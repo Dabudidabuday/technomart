@@ -5,14 +5,24 @@
   * use "gulp watch" command to start;
   */
 
+require('dotenv').config();
+
 const { gulp, src, dest, series, parallel, watch } = require('gulp');
-// const browserSync = require('browser-sync').create();
+const browserSync = require('browser-sync').create();
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const del = require('del');
 
 function deleteDistFolder () {
   return del('dist');
+}
+
+function startBrowserSync () {
+  browserSync.init({
+    proxy: `localhost:${process.env.PORT}`,
+    open: false,
+    notify: false
+  });
 }
 
 /**
@@ -67,11 +77,13 @@ async function buildProject () {
 
 // ---------------- WATCHER ---------------- //
 function watchFiles () {
+  startBrowserSync();
   watch('app/scss/HomePage/**/*.scss').on('change', buildHomePage);
   watch('app/scss/CatalogPage/**/*.scss').on('change', buildCatalogPage);
   watch('app/scss/DeveloperPage/**/*.scss').on('change', buildDeveloperPage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
   watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
+  watch('dist').on('change', browserSync.reload); // TODO optimize
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
