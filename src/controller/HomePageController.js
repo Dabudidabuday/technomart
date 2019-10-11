@@ -7,7 +7,6 @@ module.exports = function (router) {
    * @return Response
    */
   router.get('/home', function (request, response) {
-    console.log(HomePageModel);
     response.render('layouts/HomePage/index.njk', HomePageModel);
   });
 
