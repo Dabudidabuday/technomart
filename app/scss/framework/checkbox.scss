@@ -1,3 +1,13 @@
 .main-checkbox {
+  display: flex;
   
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .checkbox {
+    width: 26px;
+    height: 23px;
+    background-image: url('../../assets/img/checkbox/checkbox-off.svg');
+  }
 }
