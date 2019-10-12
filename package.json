@@ -7,7 +7,7 @@
     "dev": "nodemon server.js -e js,njk",
     "gulp": "gulp watch",
     "start": "node server.js",
-    "build": "gulp build"d
+    "build": "gulp build"
   },
   "keywords": [
     "-"
