@@ -83,7 +83,7 @@ function watchFiles () {
   watch('app/scss/DeveloperPage/**/*.scss').on('change', buildDeveloperPage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
   watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
-  watch('dist').on('change', browserSync.reload); // TODO optimize
+  watch('dist/').on('change', browserSync.reload); // TODO optimize
 }
 
 exports.watch = series(deleteDistFolder, buildProject, watchFiles);
