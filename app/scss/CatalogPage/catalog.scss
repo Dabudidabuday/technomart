@@ -2,27 +2,6 @@
     margin: 23px auto 23px 0;
     display: flex;
 
-<<<<<<< HEAD
-    .item a {
-        position: relative;
-        margin-right: 40px;
-        font-size: 13px;
-        color: #000000;
-        text-transform: uppercase;
-
-        &:not(last-child)::after {
-            content: '';
-            position: absolute;
-            top: 4px;
-            right: -28px;
-            display: inline-block;
-            width: 0.4em;
-            height: 0.4em;
-            border-right: 0.1em solid black;
-            border-top: 0.1em solid black;
-            transform: rotate(45deg);
-            margin-right: 0.5em;
-=======
     .item {
         position: relative;
 
@@ -46,7 +25,6 @@
             font-size: 13px;
             color: #000000;
             text-transform: uppercase;
->>>>>>> 4b6286f3977070d24def65d84804668dda735f36
         }
     }
 }
