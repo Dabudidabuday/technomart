@@ -1,0 +1,37 @@
+.breadcrumbs {
+    margin: 23px auto 23px 0;
+    display: flex;
+
+    .item {
+        position: relative;
+
+        &:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            top: 4px;
+            right: 9px;
+            display: inline-block;
+            width: 0.4em;
+            height: 0.4em;
+            border-right: 0.1em solid #c5c9d1;
+            border-top: 0.1em solid #c5c9d1;
+            transform: rotate(45deg);
+            margin-right: 0.5em;
+
+        }
+
+        a {
+            margin-right: 40px;
+            font-size: 13px;
+            color: #000000;
+            text-transform: uppercase;
+        }
+    }
+}
+
+.page-title {
+    width: 100%;
+    background-color: #f2f6f8;
+    padding: 33px 30px;
+    text-align: left;
+}

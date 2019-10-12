@@ -3,7 +3,6 @@
     margin-bottom: 85px;
 }
 
-
 .info__company {
     display: flex;
     flex-direction: column;
@@ -15,15 +14,9 @@
         font-weight: 300;
     }
 
-    .info__description {
-        margin-bottom: 30px;
-        font-size: 13px;
-        line-height: 24px;
-        font-weight: 100;
-    }
-
+    .info__description,
     .info__delivery {
-        margin-bottom: 25px;
+        margin-bottom: 30px;
         font-size: 13px;
         line-height: 24px;
         font-weight: 100;
@@ -96,7 +89,5 @@
         background-color: #ee3643;
         border: none;
         border-radius: 3px;
-
-
     }
 }
