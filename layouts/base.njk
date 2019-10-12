@@ -27,7 +27,9 @@
 
   {% block body %}{% endblock %}
 
-  {% block footer %}{% endblock %}
+  {% block footer %}
+      {% include 'layouts/basic/footer/main.njk' %}
+  {% endblock %}
 
   {% block application %}{% endblock %}
 </body>
