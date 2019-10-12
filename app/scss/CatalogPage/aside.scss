@@ -1,0 +1,42 @@
+.main-aside {
+  width: 220px;
+  height: auto;
+
+  .form__name {
+    margin-bottom: 20px;
+    padding: 13px 20px;
+    width: 100%;
+    font-size: 13px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: #f7f3ec;
+  }
+}
+
+.main-aside__form {
+
+  legend {
+    padding-bottom: 20px;
+    font-size: 17px;
+    font-weight: 700;
+    text-transform: uppercase;
+  }
+
+  fieldset {
+    padding-bottom: 20px;
+    display: flex;
+    text-transform: uppercase;
+  }
+
+  label {
+    padding-bottom: 20px;
+  }
+
+  .apply-filters {
+    padding: 13px 46px;
+    border-radius: 5px;
+    text-transform: uppercase;
+  }
+
+}
+

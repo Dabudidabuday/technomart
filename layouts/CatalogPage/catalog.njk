@@ -1,5 +1,5 @@
 <div class="container">
-<!--     section.breadcrumbs -->
+    <section class="breadcrumbs">
         <ul class="breadcrumbs">
             <li class="item">
                 <a href="" class="item-link">
@@ -21,8 +21,61 @@
                 <a href="" class="item-link">перфораторы</a>
             </li>
         </ul>
+    </section>
 
     <div class="page-title">
         <h2>перфораторы</h2>
     </div>
+
+    <aside class="main-aside">
+        <form class="main-aside__form" action="#" method="get">
+            <p class="form__name">фильтр:</p>
+            <fieldset class="form__price">
+                <legend>цена:</legend>
+                <input type="range">
+            </fieldset>
+
+            <fieldset>
+                <legend>производители:</legend>
+                    <label class="main-checkbox">
+                        <span class="checkbox"></span>
+                        <input type="checkbox">
+                        bosch
+                    </label>
+                    <label class="main-checkbox">
+                        <span class="checkbox"></span>
+                        <input type="checkbox">
+                        интеркол
+                    </label>
+                    <label class="main-checkbox">
+                        <span class="checkbox"></span>
+                        <input type="checkbox">
+                        makita
+                    </label>
+                    <label class="main-checkbox">
+                        <span class="checkbox"></span>
+                        <input type="checkbox">
+                        dewalt
+                    </label>
+                    <label class="main-checkbox">
+                        <span class="checkbox"></span>
+                        <input type="checkbox">
+                        hitachi
+                    </label>
+            </fieldset>
+
+            <fieldset>
+                <legend>питание:</legend>
+                <label>
+                    <input type="radio" name="radio-battery">
+                    аккумуляторные
+                </label>
+                <label>
+                    <input type="radio" name="radio-battery">
+                    сетевые
+                </label>
+            </fieldset>
+            <input class="apply-filters" type="submit" value="показать">
+        </form>
+    </aside>
 </div>
