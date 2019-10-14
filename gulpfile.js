@@ -9,6 +9,7 @@ require('dotenv').config();
 
 const { gulp, src, dest, series, parallel, watch } = require('gulp');
 const browserSync = require('browser-sync').create();
+const autoprefixer = require('gulp-autoprefixer');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const del = require('del');
@@ -33,6 +34,7 @@ function startBrowserSync () {
 function compileScss (source, dist) {
   return src(source)
     .pipe(sass().on('error', sass.logError))
+    .pipe(autoprefixer())
     .pipe(concat('main.css'))
     .pipe(dest(dist));
 }
