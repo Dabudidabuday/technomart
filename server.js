@@ -21,6 +21,9 @@ nunjucks.configure({
 });
 
 app.get('/', (request, response) => response.redirect('/home'));
+app.get("*", (request, response) => {
+  response.status(404).render('layouts/404page/index.njk');
+});
 
 // ------------------
 require('./src/controller/index.js')(app, router);

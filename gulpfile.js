@@ -38,6 +38,13 @@ function compileScss (source, dist) {
 }
 
 // ---------------- BUILD PAGES ---------------- // // todo class
+function build404page () {
+  let date = new Date();
+  let page = '404page'; // todo param
+  compileScss('app/scss/404page/index.scss', 'dist/404page');
+  return console.log (`${page} compiled successfully at ${date.getHours()}:${date.getMinutes()}:${date.getSeconds()}`);
+}
+
 function buildApp () {
   let date = new Date();
   let page = 'App/Framework'; // todo param
@@ -69,6 +76,7 @@ function buildDeveloperPage () {
 
 // ---------------- BUILD PROJECT ---------------- //
 async function buildProject () {
+  build404page();
   buildApp();
   buildHomePage();
   buildDeveloperPage();
@@ -82,6 +90,7 @@ function watchFiles () {
   watch('app/scss/CatalogPage/**/*.scss').on('change', buildCatalogPage);
   watch('app/scss/DeveloperPage/**/*.scss').on('change', buildDeveloperPage);
   watch('app/scss/framework/**/*.scss').on('change', buildApp);
+  watch('app/scss/404page/**/*.scss').on('change', build404page);
   watch('app/scss/basicComponents/**/*.scss').on('change',buildProject);
   watch('dist/').on('change', browserSync.reload); // TODO optimize
 }
