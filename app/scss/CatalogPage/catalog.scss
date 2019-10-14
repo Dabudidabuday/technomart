@@ -42,3 +42,28 @@
 }
 
 
+
+.sorting {
+    margin-left: 20px;
+    padding: 19px 15px;
+    vertical-align: center;
+    width: 700px;
+    legend {
+        margin-right: 140px;
+    }
+}
+
+.sorting__form {
+    display: flex;
+    text-transform: uppercase;
+}
+
+.sorting__toggles--type {
+    display: flex;
+    justify-content: space-between;
+    width: 355px;
+
+    input {
+        display: none;
+    }
+}

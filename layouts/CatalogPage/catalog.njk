@@ -27,55 +27,86 @@
         <h2>перфораторы</h2>
     </div>
 
-    <aside class="main-aside">
-        <form class="main-aside__form" action="#" method="get">
-            <p class="form__name">фильтр:</p>
-            <fieldset class="form__price">
-                <legend>цена:</legend>
-                <input type="range">
-            </fieldset>
+    <div class="div container--content">
+        <aside class="main-aside">
+            <form class="main-aside__form" action="#" method="get">
+                <p class="form__name">фильтр:</p>
+                <fieldset class="form__price">
+                    <legend>цена:</legend>
+                    <input type="range">
+                </fieldset>
 
-            <fieldset>
-                <legend>производители:</legend>
-                    <label class="main-checkbox">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
-                        bosch
-                    </label>
-                    <label class="main-checkbox">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
-                        интеркол
-                    </label>
-                    <label class="main-checkbox">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
-                        makita
-                    </label>
-                    <label class="main-checkbox">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
-                        dewalt
-                    </label>
-                    <label class="main-checkbox">
-                        <span class="checkbox"></span>
-                        <input type="checkbox">
-                        hitachi
-                    </label>
-            </fieldset>
+                <fieldset>
+                    <legend>производители:</legend>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            bosch
+                        </label>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            интеркол
+                        </label>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            makita
+                        </label>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            dewalt
+                        </label>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            hitachi
+                        </label>
+                </fieldset>
 
-            <fieldset>
-                <legend>питание:</legend>
-                <label>
-                    <input type="radio" name="radio-battery">
-                    аккумуляторные
-                </label>
-                <label>
-                    <input type="radio" name="radio-battery">
-                    сетевые
-                </label>
-            </fieldset>
-            <input class="apply-filters" type="submit" value="показать">
-        </form>
-    </aside>
+                <fieldset>
+                    <legend>питание:</legend>
+                    <label class="main-radio">
+                        <input type="radio" name="radio-battery">
+                        <span class="radio"></span>
+                        аккумуляторные
+                    </label>
+
+                    <label class="main-radio">
+                        <input type="radio" name="radio-battery">
+                        <span class="radio"></span>
+                        сетевые
+                    </label>
+                </fieldset>
+                <input class="apply-filters" type="submit" value="показать">
+            </form>
+        </aside>
+
+        <div class="sorting">
+            <form class="sorting__form" action="#" method="get">
+                <legend>сортировка:</legend>
+                <fieldset class="sorting__toggles--type">
+                    <label>
+                        <input type="radio" name="sort-toggle">
+                        по цене
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sort-toggle">
+                        по типу
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sort-toggle">
+                        по функционалу
+                    </label>
+                </fieldset>
+                <fieldset>
+                    <button type="button"><img src="assets/img/sorting/icon-up-dir.png" alt=""></button>
+                    <button type="button"><img src="assets/img/sorting/icon-search.png" alt=""></button>
+                </fieldset>
+            </form>
+        </div>
+    </div>
 </div>
