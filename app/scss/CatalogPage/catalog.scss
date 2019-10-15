@@ -41,29 +41,46 @@
     background-color: #f2f6f8;
 }
 
-
-
 .sorting {
-    margin-left: 20px;
-    padding: 19px 15px;
-    vertical-align: center;
     width: 700px;
-    legend {
-        margin-right: 140px;
-    }
+    height: 38px;
+    background-color: #f7f3ec;
+    border-radius: 5px;
 }
 
 .sorting__form {
     display: flex;
-    text-transform: uppercase;
-}
-
-.sorting__toggles--type {
-    display: flex;
+    padding: 11px 12px;
     justify-content: space-between;
-    width: 355px;
+    font-size: 13px;
+    text-transform: uppercase;
 
-    input {
-        display: none;
+    legend {
+        margin-right: 140px;
+        font-weight: 700;
+    }
+
+    .sorting__toggles--type {
+        width: 355px;
+        opacity: 0.3;
+
+        label:not(:last-child) {
+            margin-right: 73px;
+        }
+    }
+
+    .input[type="radio"] {
+
+        &:checked {
+            & + label {
+                color: #ee3643;
+                opacity: 1;
+            }
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
     }
 }
