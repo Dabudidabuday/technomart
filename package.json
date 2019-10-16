@@ -6,10 +6,17 @@
   "scripts": {
     "dev": "nodemon server.js -e js,njk",
     "gulp": "gulp watch",
+    "start": "node server.js",
     "build": "gulp build"
   },
   "keywords": [
     "-"
+  ],
+  "homepage": "http://techno-mart.herokuapp.com/",
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not ie <= 9"
   ],
   "repository": {
     "type": "git",
@@ -30,6 +37,7 @@
     "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "gulp": "^4.0.2",
+    "gulp-autoprefixer": "^7.0.1",
     "gulp-concat": "^2.6.1",
     "gulp-sass": "^4.0.2",
     "nunjucks": "^3.2.0"
