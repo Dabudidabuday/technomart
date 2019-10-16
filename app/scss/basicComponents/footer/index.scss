@@ -23,8 +23,15 @@
     justify-content: space-between;
     font-size: 18px;
 
-    &:hover {
+
+     a:hover {
         border-bottom: 1px solid #dadfe4;
+    }
+
+     a:active {
+         opacity: 50%;
+         font-weight: 900;
+         border: none;
     }
 }
 
@@ -50,6 +57,16 @@
         a {
             font-size: 18px;
             color: #ffd180;
+        }
+
+        a:hover {
+            border-bottom: 1px solid #e6c07c;
+        }
+
+        a:active {
+            opacity: 50%;
+            font-weight: 900;
+            border: none;
         }
     }
 }
@@ -82,10 +99,20 @@
             height: 41px;
             background-color: #212a3a;
             border-radius: 50%;
+
+            &:hover {
+                background-color: #ee3643;
+            }
         }
+
+
     }
 
     .main-footer__typesetter {
         color: #ffd180;
+
+        li {
+            margin-bottom: 10px;
+        }
     }
 }
