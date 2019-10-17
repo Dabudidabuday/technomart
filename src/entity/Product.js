@@ -6,7 +6,7 @@
 class Product {
   constructor(product) {
     this.title = product.title;
-    this.price = product.price;
+    this.prices = product.prices;
     this.brand = product.brand;
   }
 }
