@@ -1,7 +1,9 @@
 class CatalogPageModel {
-  constructor () {
+  constructor (data) {
     this.title = 'CatalogPage';
+    this.breadcrumbs = data.breadcrumbs;
+    this.products = data.products;
   }
 }
 
-module.exports = new CatalogPageModel ();
+module.exports = CatalogPageModel;

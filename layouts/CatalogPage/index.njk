@@ -8,3 +8,10 @@
 {% block body %}
   {% include 'layouts/CatalogPage/catalog.njk' %};
 {% endblock %}
+
+{% block application %}
+  <script> // todo temp
+    var MAIN_PAGE_DATA = {{ MAIN_PAGE_DATA | dump | safe }}
+    console.log(MAIN_PAGE_DATA);
+  </script>
+{% endblock %}
