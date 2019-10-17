@@ -8,6 +8,7 @@
   width: 25px;
   height: 25px;
   background: url('../../assets/img/radio/radio-off.png');
+  transition: background .3s;
 }
 
 input[type='radio'] {
@@ -21,4 +22,3 @@ input[type='radio'] {
     }
   }
 }
-
