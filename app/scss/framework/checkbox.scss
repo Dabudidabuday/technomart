@@ -1,0 +1,27 @@
+.main-checkbox {
+  display: flex; // todo width
+  align-items: center;
+
+  .checkbox {
+    margin-right: 5px;
+    width: 29px;
+    height: 23px;
+    background: url('../../assets/img/checkbox/checkbox-off.png') no-repeat;
+    transition: background .3s;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+
+    &:checked {
+      & + .checkbox {
+        width: 29px;
+        height: 23px;
+        background: url('../../assets/img/checkbox/checkbox-on.png') no-repeat;
+      }
+    }
+  }
+
+
+}
+

@@ -1,5 +1,5 @@
 <div class="container">
-<!--     section.breadcrumbs -->
+    <section class="breadcrumbs">
         <ul class="breadcrumbs">
             <li class="item">
                 <a href="" class="item-link">
@@ -21,8 +21,97 @@
                 <a href="" class="item-link">перфораторы</a>
             </li>
         </ul>
+    </section>
 
     <div class="page-title">
         <h2>перфораторы</h2>
+    </div>
+
+    <div class="div container--content">
+        <aside class="main-aside">
+            <form class="main-aside__form" action="#" method="get">
+                <p class="form__name">фильтр:</p>
+                <fieldset class="form__price">
+                    <legend>цена:</legend>
+                    <input type="range">
+                </fieldset>
+
+                <fieldset>
+                    <legend>производители:</legend>
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            bosch
+                        </label>
+
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            интеркол
+                        </label>
+
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            makita
+                        </label>
+
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            dewalt
+                        </label>
+                        
+                        <label class="main-checkbox">
+                            <input type="checkbox">
+                            <span class="checkbox"></span>
+                            hitachi
+                        </label>
+                </fieldset>
+
+                <fieldset>
+                    <legend>питание:</legend>
+                    <label class="main-radio">
+                        <input type="radio" name="radio-battery">
+                        <span class="radio"></span>
+                        аккумуляторные
+                    </label>
+
+                    <label class="main-radio">
+                        <input type="radio" name="radio-battery">
+                        <span class="radio"></span>
+                        сетевые
+                    </label>
+                </fieldset>
+                <input class="apply-filters" type="submit" value="показать">
+            </form>
+        </aside>
+
+        <div class="sorting">
+            <form class="sorting__form" action="#" method="get">
+                <legend>сортировка:</legend>
+                <fieldset class="sorting__toggles--type">
+                    <label>
+                        <input type="radio" name="sorting-toggle" checked>
+                        <span class="sorting__name">по цене</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sorting-toggle">
+                        <span class="sorting__name">по типу</span>
+                    </label>
+
+                    <label>
+                        <input type="radio" name="sorting-toggle">
+                        <span class="sorting__name">по функционалу</span>
+                    </label>
+                </fieldset>
+
+                <fieldset>
+                    <button type="button"><img src="assets/img/sorting/icon-up-dir.png" alt=""></button>
+                    <button type="button"><img src="assets/img/sorting/icon-search.png" alt=""></button>
+                </fieldset>
+            </form>
+        </div>
     </div>
 </div>

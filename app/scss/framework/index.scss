@@ -2,6 +2,8 @@
 @import 'links.scss';
 @import 'buttons.scss';
 @import 'mixins.scss';
+@import 'checkbox.scss';
+@import 'radio.scss';
 
 html,body {
     font-family: 'Cuprum', sans-serif;
@@ -10,6 +12,11 @@ html,body {
 .container {
     width: 942px;
     margin: 0 auto;
+}
+
+.container--content {
+  display: flex;
+
 }
 
 .clear {

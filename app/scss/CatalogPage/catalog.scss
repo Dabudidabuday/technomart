@@ -30,8 +30,65 @@
 }
 
 .page-title {
-    width: 100%;
-    background-color: #f2f6f8;
+    margin-bottom: 20px;
     padding: 33px 30px;
+    width: 100%;
     text-align: left;
+    text-transform: uppercase;
+    font-size: 30px;
+    font-weight: 100;
+    color: #32425c;
+    background-color: #f2f6f8;
+}
+
+.sorting {
+    width: 700px;
+    height: 38px;
+    background-color: #f7f3ec;
+    border-radius: 5px;
+}
+
+.sorting__form {
+    display: flex;
+    padding: 11px 12px;
+    justify-content: space-between;
+    font-size: 13px;
+    text-transform: uppercase;
+
+    legend {
+        margin-right: 140px;
+        font-weight: 700;
+    }
+
+    .sorting__toggles--type {
+        width: 355px;
+
+        .sorting__name {
+            cursor: pointer;
+            opacity: 0.3;
+        }
+
+        label:not(:last-child) {
+            margin-right: 73px;
+        }
+    }
+
+    input[type="radio"] {
+
+
+        &:checked {
+
+            & + .sorting__name {
+                color: #ee3643;
+                opacity: 1;
+                transition: .3s;
+
+            }
+        }
+    }
+
+    button {
+        background: transparent;
+        border: none;
+    }
 }
