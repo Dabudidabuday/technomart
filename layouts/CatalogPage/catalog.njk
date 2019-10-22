@@ -61,7 +61,7 @@
                             <span class="checkbox"></span>
                             dewalt
                         </label>
-                        
+
                         <label class="main-checkbox">
                             <input type="checkbox">
                             <span class="checkbox"></span>
@@ -113,5 +113,18 @@
                 </fieldset>
             </form>
         </div>
+
+        <section class="goods">
+            <ul class="goods__list">
+                {% for item in items %}
+                  <li class="item">
+                      <img src="{{ item.image }}" />
+                      <h6> {{ item.title }} </h6>
+                      <p> {{ item.prices.old }} </p>
+                      <p> {{ item.price.new }} </p>
+                  </li>
+                {% endfor %}
+            </ul>
+        </section>
     </div>
 </div>
