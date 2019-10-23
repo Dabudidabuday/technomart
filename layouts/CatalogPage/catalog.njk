@@ -28,103 +28,111 @@
     </div>
 
     <div class="div container--content">
-        <aside class="main-aside">
-            <form class="main-aside__form" action="#" method="get">
-                <p class="form__name">фильтр:</p>
-                <fieldset class="form__price">
-                    <legend>цена:</legend>
-                    <input type="range">
-                </fieldset>
+        <div class="container--aside">
+            <aside class="main-aside">
+                <form class="main-aside__form" action="#" method="get">
+                    <p class="form__name">фильтр:</p>
+                    <fieldset class="form__price">
+                        <legend>цена:</legend>
+                        <input type="range">
+                    </fieldset>
 
-                <fieldset>
-                    <legend>производители:</legend>
-                        <label class="main-checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox"></span>
-                            bosch
+                    <fieldset>
+                        <legend>производители:</legend>
+                            <label class="main-checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                bosch
+                            </label>
+
+                            <label class="main-checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                интеркол
+                            </label>
+
+                            <label class="main-checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                makita
+                            </label>
+
+                            <label class="main-checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                dewalt
+                            </label>
+
+                            <label class="main-checkbox">
+                                <input type="checkbox">
+                                <span class="checkbox"></span>
+                                hitachi
+                            </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <legend>питание:</legend>
+                        <label class="main-radio">
+                            <input type="radio" name="radio-battery">
+                            <span class="radio"></span>
+                            аккумуляторные
                         </label>
 
-                        <label class="main-checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox"></span>
-                            интеркол
+                        <label class="main-radio">
+                            <input type="radio" name="radio-battery">
+                            <span class="radio"></span>
+                            сетевые
                         </label>
-
-                        <label class="main-checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox"></span>
-                            makita
-                        </label>
-
-                        <label class="main-checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox"></span>
-                            dewalt
-                        </label>
-
-                        <label class="main-checkbox">
-                            <input type="checkbox">
-                            <span class="checkbox"></span>
-                            hitachi
-                        </label>
-                </fieldset>
-
-                <fieldset>
-                    <legend>питание:</legend>
-                    <label class="main-radio">
-                        <input type="radio" name="radio-battery">
-                        <span class="radio"></span>
-                        аккумуляторные
-                    </label>
-
-                    <label class="main-radio">
-                        <input type="radio" name="radio-battery">
-                        <span class="radio"></span>
-                        сетевые
-                    </label>
-                </fieldset>
-                <input class="apply-filters" type="submit" value="показать">
-            </form>
-        </aside>
-
-        <div class="sorting">
-            <form class="sorting__form" action="#" method="get">
-                <legend>сортировка:</legend>
-                <fieldset class="sorting__toggles--type">
-                    <label>
-                        <input type="radio" name="sorting-toggle" checked>
-                        <span class="sorting__name">по цене</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="sorting-toggle">
-                        <span class="sorting__name">по типу</span>
-                    </label>
-
-                    <label>
-                        <input type="radio" name="sorting-toggle">
-                        <span class="sorting__name">по функционалу</span>
-                    </label>
-                </fieldset>
-
-                <fieldset>
-                    <button type="button"><img src="assets/img/sorting/icon-up-dir.png" alt=""></button>
-                    <button type="button"><img src="assets/img/sorting/icon-search.png" alt=""></button>
-                </fieldset>
-            </form>
+                    </fieldset>
+                    <input class="apply-filters" type="submit" value="показать">
+                </form>
+            </aside>
         </div>
 
-        <section class="goods">
-            <ul class="goods__list">
-                {% for item in items %}
-                  <li class="item">
-                      <img src="{{ item.image }}" />
-                      <h6> {{ item.title }} </h6>
-                      <p> {{ item.prices.old }} </p>
-                      <p> {{ item.price.new }} </p>
-                  </li>
-                {% endfor %}
-            </ul>
-        </section>
+        <div class="container--catalog">
+            <section class="sorting">
+                <form class="sorting__form" action="#" method="get">
+                    <legend>сортировка:</legend>
+                    <fieldset class="sorting__toggles--type">
+                        <label>
+                            <input type="radio" name="sorting-toggle" checked>
+                            <span class="sorting__name">по цене</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="sorting-toggle">
+                            <span class="sorting__name">по типу</span>
+                        </label>
+
+                        <label>
+                            <input type="radio" name="sorting-toggle">
+                            <span class="sorting__name">по функционалу</span>
+                        </label>
+                    </fieldset>
+
+                    <fieldset>
+                        <button type="button"><img src="assets/img/sorting/icon-up-dir.png" alt=""></button>
+                        <button type="button"><img src="assets/img/sorting/icon-search.png" alt=""></button>
+                    </fieldset>
+                </form>
+            </section>
+
+            <section class="goods">
+                <ul class="goods__list">
+                    {% for item in MAIN_PAGE_DATA.products %}
+                      <li class="item">
+                          <img class="item__img" src="{{ item.image }}" />
+                          <h6 class="item__title"> {{ item.title }} </h6>
+                          <p class="item__price--old">
+                              {{ item.prices.old }} Р.
+                          </p>
+                          <p class="item__price--new">
+                              {{ item.prices.new }} Р.
+                          </p>
+                      </li>
+                    {% endfor %}
+                </ul>
+            </section>
+        </div>
     </div>
 </div>

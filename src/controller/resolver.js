@@ -12,13 +12,14 @@ class Resolver {
   getProducts () {
     let items = new Array();
 
-    for (let i = 0; i < 5; i++) {
+    for (let i = 0; i < 20; i++) {
       items.push(new ProductEntity({
+        image: 'https://static.dnipro-m.ua/cache/products/1237/catalog_origin_162421.jpg',
         title: this.getRandomTitle(),
         brand: this.getRandomBrand(),
         prices: {
           old: this.getRandomPrice(),
-          new: this.getRandomPrice()
+          new: this.getRandomPrice(),
         },
       }));
     }

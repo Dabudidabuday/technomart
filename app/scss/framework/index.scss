@@ -15,7 +15,16 @@ html,body {
 }
 
 .container--content {
+    display: flex;
+    height: 1000px;
+}
+
+.container--aside {
   display: flex;
+  width: 220px;
+}
+
+.container--catalog {
 
 }
 
